@@ -49,11 +49,11 @@ $(() => {
     // get the data from the form
     // const content = $(this).find('input').val();
     // ajax post request
-    // console.log($(this).serialize());
+    const serialized = $(this).serialize();
     $.ajax({
       method: "POST",
       url: "/creaks",
-      data: $(this).serialize()
+      data: serialized
     }).done(function() {
       // on success, refresh the creaks on the page
       getAllCreaks();
